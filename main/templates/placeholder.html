@@ -1,0 +1,22 @@
+{% extends 'base_marketing.html' %}
+
+{% block title %}{{ page_title }} - TrailTrack Pro{% endblock %}
+
+{% block content %}
+<section class="pt-24 md:pt-32 pb-16 md:pb-24 min-h-screen flex items-center justify-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-brand-50 rounded-2xl p-12 md:p-16 border border-brand-100">
+            <div class="w-20 h-20 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="construction" class="w-10 h-10 text-brand-600"></i>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{{ page_title }}</h1>
+            <p class="text-lg text-gray-600 mb-8">This page is coming soon. Check back later!</p>
+            <a href="{% url 'index' %}"
+                class="inline-flex items-center px-6 py-3 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+                Back to Home
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

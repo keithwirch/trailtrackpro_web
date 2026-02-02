@@ -16,9 +16,6 @@ def features(request):
 def pricing(request):
     return render(request, 'pricing.html')
 
-def about(request):
-    return render(request, 'placeholder.html', {'page_title': 'About'})
-
 def contact(request):
     return render(request, 'placeholder.html', {'page_title': 'Contact'})
 

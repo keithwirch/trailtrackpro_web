@@ -8,65 +8,72 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <!-- Hero Content -->
             <div class="text-center lg:text-left">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
                     Trail Camera Management
-                    <span class="text-brand-500 block">Made Easy</span>
+                    <span class="text-brand-400 block">Made Easy</span>
                 </h1>
-                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
+                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0">
                     Organize your trail camera images and videos, map locations across multiple properties,
                     and import directly from cell cams. All without the cloud.
                 </p>
                 <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <a href="#download"
-                        class="inline-flex items-center justify-center px-8 py-4 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-600 transition-all shadow-xl shadow-brand-500/30 hover-lift">
+                        class="inline-flex items-center justify-center px-8 py-4 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-400 transition-all shadow-xl shadow-brand-500/30 hover-lift">
                         <i data-lucide="download" class="w-5 h-5 mr-2"></i>
                         Download Free 7-Day Trial
                     </a>
                     <a href="{% url 'features' %}"
-                        class="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-600 font-bold rounded-xl hover:bg-gray-50 transition-all border-2 border-brand-200 hover-lift">
+                        class="inline-flex items-center justify-center px-8 py-4 bg-slate-800 text-brand-400 font-bold rounded-xl hover:bg-slate-700 transition-all border border-slate-600 hover-lift">
                         <i data-lucide="play-circle" class="w-5 h-5 mr-2"></i>
                         See Features
                     </a>
                 </div>
-                <div class="mt-8 flex items-center justify-center lg:justify-start space-x-6 text-sm text-gray-500">
+                <div class="mt-8 flex items-center justify-center lg:justify-start space-x-6 text-sm text-gray-400">
                     <div class="flex items-center">
-                        <i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i>
+                        <i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i>
                         No subscription
                     </div>
                     <div class="flex items-center">
-                        <i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-500"></i>
+                        <i data-lucide="check-circle" class="w-4 h-4 mr-2 text-green-400"></i>
                         One-time purchase
                     </div>
                 </div>
             </div>
 
-            <!-- Hero Image Placeholder -->
+            <!-- Hero Image -->
             <div class="relative">
-                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
-                    <div class="bg-gray-100 h-64 md:h-80 lg:h-96 flex items-center justify-center">
-                        <div class="text-center text-gray-400">
-                            <i data-lucide="image" class="w-16 h-16 mx-auto mb-4 opacity-50"></i>
-                            <p class="font-medium">App Screenshot Placeholder</p>
-                            <p class="text-sm">Main interface view</p>
+                <div class="rounded-2xl shadow-2xl overflow-hidden border border-slate-700 cursor-pointer group"
+                    onclick="openLightbox()">
+                    <img src="{% static 'images/screenshots/main.png' %}"
+                        alt="TrailTrack Pro main interface showing map view with camera locations and trail camera photo gallery"
+                        class="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                        <div
+                            class="opacity-0 group-hover:opacity-100 transition-opacity bg-slate-900/80 backdrop-blur-sm px-4 py-2 rounded-lg">
+                            <span class="text-white text-sm font-medium flex items-center">
+                                <i data-lucide="zoom-in" class="w-4 h-4 mr-2"></i>
+                                Click to enlarge
+                            </span>
                         </div>
                     </div>
                 </div>
                 <!-- Decorative elements -->
-                <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-500/10 rounded-full blur-2xl"></div>
-                <div class="absolute -top-4 -left-4 w-32 h-32 bg-brand-400/10 rounded-full blur-2xl"></div>
+                <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-500/20 rounded-full blur-2xl"></div>
+                <div class="absolute -top-4 -left-4 w-32 h-32 bg-brand-400/20 rounded-full blur-2xl"></div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Features Section -->
-<section id="features" class="py-16 md:py-24 bg-white">
+<section id="features" class="py-16 md:py-24 bg-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
                 Everything You Need to Manage Your Trail Cameras
             </h2>
-            <p class="mt-4 text-lg text-gray-600">
+            <p class="mt-4 text-lg text-gray-400">
                 Powerful features designed specifically for hunters and wildlife enthusiasts.
             </p>
         </div>
@@ -74,11 +81,11 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Feature 1: Image & Video Management -->
             <div class="glass-card rounded-2xl p-8 hover-lift">
-                <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6">
-                    <i data-lucide="image" class="w-7 h-7 text-brand-600"></i>
+                <div class="w-14 h-14 bg-brand-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="image" class="w-7 h-7 text-brand-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Image & Video Management</h3>
-                <p class="text-gray-600">
+                <h3 class="text-xl font-bold text-white mb-3">Image & Video Management</h3>
+                <p class="text-gray-400">
                     Organize thousands of trail camera photos and videos with ease. Quick preview, tagging, and sorting
                     capabilities.
                 </p>
@@ -86,33 +93,33 @@
 
             <!-- Feature 2: Location-Based -->
             <div class="glass-card rounded-2xl p-8 hover-lift">
-                <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6">
-                    <i data-lucide="map-pin" class="w-7 h-7 text-brand-600"></i>
+                <div class="w-14 h-14 bg-brand-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="map-pin" class="w-7 h-7 text-brand-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Location-Based Organization</h3>
-                <p class="text-gray-600">
+                <h3 class="text-xl font-bold text-white mb-3">Location-Based Organization</h3>
+                <p class="text-gray-400">
                     Pin your camera locations on interactive maps. See exactly where each photo was taken at a glance.
                 </p>
             </div>
 
             <!-- Feature 3: Cell Cam Imports -->
             <div class="glass-card rounded-2xl p-8 hover-lift">
-                <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6">
-                    <i data-lucide="smartphone" class="w-7 h-7 text-brand-600"></i>
+                <div class="w-14 h-14 bg-brand-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="smartphone" class="w-7 h-7 text-brand-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Cell Cam Imports</h3>
-                <p class="text-gray-600">
+                <h3 class="text-xl font-bold text-white mb-3">Cell Cam Imports</h3>
+                <p class="text-gray-400">
                     Seamlessly import images from your cellular trail cameras. Works with all major cell cam brands.
                 </p>
             </div>
 
             <!-- Feature 4: Multiple Properties -->
             <div class="glass-card rounded-2xl p-8 hover-lift">
-                <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6">
-                    <i data-lucide="trees" class="w-7 h-7 text-brand-600"></i>
+                <div class="w-14 h-14 bg-brand-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="trees" class="w-7 h-7 text-brand-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Multiple Properties</h3>
-                <p class="text-gray-600">
+                <h3 class="text-xl font-bold text-white mb-3">Multiple Properties</h3>
+                <p class="text-gray-400">
                     Manage cameras across different properties or hunting leases. Keep everything organized in one
                     place.
                 </p>
@@ -120,22 +127,22 @@
 
             <!-- Feature 5: No Cloud, Your Data -->
             <div class="glass-card rounded-2xl p-8 hover-lift">
-                <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6">
-                    <i data-lucide="hard-drive" class="w-7 h-7 text-brand-600"></i>
+                <div class="w-14 h-14 bg-brand-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="hard-drive" class="w-7 h-7 text-brand-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Your Data, Your Control</h3>
-                <p class="text-gray-600">
+                <h3 class="text-xl font-bold text-white mb-3">Your Data, Your Control</h3>
+                <p class="text-gray-400">
                     All data stays on your device. No cloud uploads, no monthly fees, no privacy concerns.
                 </p>
             </div>
 
             <!-- Feature 6: One-Time Purchase -->
             <div class="glass-card rounded-2xl p-8 hover-lift">
-                <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6">
-                    <i data-lucide="badge-check" class="w-7 h-7 text-brand-600"></i>
+                <div class="w-14 h-14 bg-brand-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="badge-check" class="w-7 h-7 text-brand-400"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Own It Forever</h3>
-                <p class="text-gray-600">
+                <h3 class="text-xl font-bold text-white mb-3">Own It Forever</h3>
+                <p class="text-gray-400">
                     One-time purchase means no recurring subscriptions. Buy once, use forever with free updates.
                 </p>
             </div>
@@ -144,13 +151,13 @@
 </section>
 
 <!-- How It Works Section -->
-<section class="py-16 md:py-24 bg-gray-50">
+<section class="py-16 md:py-24 bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
                 Get Started in Minutes
             </h2>
-            <p class="mt-4 text-lg text-gray-600">
+            <p class="mt-4 text-lg text-gray-400">
                 Simple setup, powerful results.
             </p>
         </div>
@@ -162,14 +169,14 @@
                     class="relative inline-flex items-center justify-center w-20 h-20 bg-brand-500 text-white text-2xl font-bold rounded-full mb-6 shadow-lg shadow-brand-500/30">
                     1
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Download & Install</h3>
-                <p class="text-gray-600">
+                <h3 class="text-xl font-bold text-white mb-3">Download & Install</h3>
+                <p class="text-gray-400">
                     Get TrailTrack Pro for your platform. Available on Windows, macOS, Linux, iOS, and Android.
                 </p>
                 <!-- Placeholder Image -->
-                <div class="mt-6 bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
-                    <div class="bg-gray-100 h-40 flex items-center justify-center">
-                        <div class="text-gray-400 text-center">
+                <div class="mt-6 bg-slate-800 rounded-xl shadow-md overflow-hidden border border-slate-700">
+                    <div class="bg-slate-700 h-40 flex items-center justify-center">
+                        <div class="text-gray-500 text-center">
                             <i data-lucide="download-cloud" class="w-10 h-10 mx-auto mb-2 opacity-50"></i>
                             <p class="text-sm">Screenshot Placeholder</p>
                         </div>
@@ -183,14 +190,14 @@
                     class="relative inline-flex items-center justify-center w-20 h-20 bg-brand-500 text-white text-2xl font-bold rounded-full mb-6 shadow-lg shadow-brand-500/30">
                     2
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Import Your Media</h3>
-                <p class="text-gray-600">
+                <h3 class="text-xl font-bold text-white mb-3">Import Your Media</h3>
+                <p class="text-gray-400">
                     Import from SD cards, cell cams, or folders. Automatic organization by date and camera.
                 </p>
                 <!-- Placeholder Image -->
-                <div class="mt-6 bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
-                    <div class="bg-gray-100 h-40 flex items-center justify-center">
-                        <div class="text-gray-400 text-center">
+                <div class="mt-6 bg-slate-800 rounded-xl shadow-md overflow-hidden border border-slate-700">
+                    <div class="bg-slate-700 h-40 flex items-center justify-center">
+                        <div class="text-gray-500 text-center">
                             <i data-lucide="folder-input" class="w-10 h-10 mx-auto mb-2 opacity-50"></i>
                             <p class="text-sm">Screenshot Placeholder</p>
                         </div>
@@ -204,14 +211,14 @@
                     class="relative inline-flex items-center justify-center w-20 h-20 bg-brand-500 text-white text-2xl font-bold rounded-full mb-6 shadow-lg shadow-brand-500/30">
                     3
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Browse & Analyze</h3>
-                <p class="text-gray-600">
+                <h3 class="text-xl font-bold text-white mb-3">Browse & Analyze</h3>
+                <p class="text-gray-400">
                     View your trail cam footage on maps, filter by location, and track wildlife patterns.
                 </p>
                 <!-- Placeholder Image -->
-                <div class="mt-6 bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
-                    <div class="bg-gray-100 h-40 flex items-center justify-center">
-                        <div class="text-gray-400 text-center">
+                <div class="mt-6 bg-slate-800 rounded-xl shadow-md overflow-hidden border border-slate-700">
+                    <div class="bg-slate-700 h-40 flex items-center justify-center">
+                        <div class="text-gray-500 text-center">
                             <i data-lucide="layout-grid" class="w-10 h-10 mx-auto mb-2 opacity-50"></i>
                             <p class="text-sm">Screenshot Placeholder</p>
                         </div>
@@ -223,20 +230,20 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="py-16 md:py-24 bg-white">
+<section class="py-16 md:py-24 bg-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
                 Trusted by Hunters & Wildlife Enthusiasts
             </h2>
-            <p class="mt-4 text-lg text-gray-600">
+            <p class="mt-4 text-lg text-gray-400">
                 See what our users have to say.
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Testimonial 1 Placeholder -->
-            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div class="bg-slate-700 rounded-2xl p-8 border border-slate-600">
                 <div class="flex items-center mb-4">
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
@@ -244,22 +251,22 @@
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                 </div>
-                <p class="text-gray-600 italic mb-6">
+                <p class="text-gray-300 italic mb-6">
                     "Placeholder testimonial from a beta tester. This will be replaced with real feedback from users."
                 </p>
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-brand-200 rounded-full flex items-center justify-center mr-4">
-                        <i data-lucide="user" class="w-6 h-6 text-brand-600"></i>
+                    <div class="w-12 h-12 bg-brand-500/20 rounded-full flex items-center justify-center mr-4">
+                        <i data-lucide="user" class="w-6 h-6 text-brand-400"></i>
                     </div>
                     <div>
-                        <p class="font-semibold text-gray-900">Tester Name</p>
-                        <p class="text-sm text-gray-500">Location, State</p>
+                        <p class="font-semibold text-white">Tester Name</p>
+                        <p class="text-sm text-gray-400">Location, State</p>
                     </div>
                 </div>
             </div>
 
             <!-- Testimonial 2 Placeholder -->
-            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div class="bg-slate-700 rounded-2xl p-8 border border-slate-600">
                 <div class="flex items-center mb-4">
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
@@ -267,22 +274,22 @@
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                 </div>
-                <p class="text-gray-600 italic mb-6">
+                <p class="text-gray-300 italic mb-6">
                     "Placeholder testimonial from a beta tester. This will be replaced with real feedback from users."
                 </p>
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-brand-200 rounded-full flex items-center justify-center mr-4">
-                        <i data-lucide="user" class="w-6 h-6 text-brand-600"></i>
+                    <div class="w-12 h-12 bg-brand-500/20 rounded-full flex items-center justify-center mr-4">
+                        <i data-lucide="user" class="w-6 h-6 text-brand-400"></i>
                     </div>
                     <div>
-                        <p class="font-semibold text-gray-900">Tester Name</p>
-                        <p class="text-sm text-gray-500">Location, State</p>
+                        <p class="font-semibold text-white">Tester Name</p>
+                        <p class="text-sm text-gray-400">Location, State</p>
                     </div>
                 </div>
             </div>
 
             <!-- Testimonial 3 Placeholder -->
-            <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div class="bg-slate-700 rounded-2xl p-8 border border-slate-600">
                 <div class="flex items-center mb-4">
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
@@ -290,16 +297,16 @@
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                     <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                 </div>
-                <p class="text-gray-600 italic mb-6">
+                <p class="text-gray-300 italic mb-6">
                     "Placeholder testimonial from a beta tester. This will be replaced with real feedback from users."
                 </p>
                 <div class="flex items-center">
-                    <div class="w-12 h-12 bg-brand-200 rounded-full flex items-center justify-center mr-4">
-                        <i data-lucide="user" class="w-6 h-6 text-brand-600"></i>
+                    <div class="w-12 h-12 bg-brand-500/20 rounded-full flex items-center justify-center mr-4">
+                        <i data-lucide="user" class="w-6 h-6 text-brand-400"></i>
                     </div>
                     <div>
-                        <p class="font-semibold text-gray-900">Tester Name</p>
-                        <p class="text-sm text-gray-500">Location, State</p>
+                        <p class="font-semibold text-white">Tester Name</p>
+                        <p class="text-sm text-gray-400">Location, State</p>
                     </div>
                 </div>
             </div>
@@ -311,10 +318,10 @@
 <section id="download" class="py-16 md:py-24 hero-gradient">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
                 Ready to Get Started?
             </h2>
-            <p class="mt-4 text-lg text-gray-600">
+            <p class="mt-4 text-lg text-gray-300">
                 Download TrailTrack Pro free for 7 days. No credit card required.
             </p>
 
@@ -322,40 +329,40 @@
             <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
                 <!-- Windows -->
                 <a href="#"
-                    class="flex items-center justify-center px-6 py-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all hover-lift border border-gray-200">
+                    class="flex items-center justify-center px-6 py-4 bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition-all hover-lift border border-slate-600">
                     <svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
                     </svg>
                     <div class="text-left">
-                        <p class="text-xs text-gray-500">Download for</p>
-                        <p class="font-semibold text-gray-900">Windows</p>
+                        <p class="text-xs text-gray-400">Download for</p>
+                        <p class="font-semibold text-white">Windows</p>
                     </div>
                 </a>
 
                 <!-- macOS -->
                 <a href="#"
-                    class="flex items-center justify-center px-6 py-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all hover-lift border border-gray-200">
+                    class="flex items-center justify-center px-6 py-4 bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition-all hover-lift border border-slate-600">
                     <svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                     </svg>
                     <div class="text-left">
-                        <p class="text-xs text-gray-500">Download for</p>
-                        <p class="font-semibold text-gray-900">macOS</p>
+                        <p class="text-xs text-gray-400">Download for</p>
+                        <p class="font-semibold text-white">macOS</p>
                     </div>
                 </a>
 
                 <!-- Linux -->
                 <a href="#"
-                    class="flex items-center justify-center px-6 py-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all hover-lift border border-gray-200">
+                    class="flex items-center justify-center px-6 py-4 bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition-all hover-lift border border-slate-600">
                     <svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 00-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 01-.004-.021l-.004-.024a1.807 1.807 0 01-.15.706.953.953 0 01-.213.335.71.71 0 00-.088-.042c-.104-.045-.198-.064-.284-.133a1.312 1.312 0 00-.22-.066c.05-.06.146-.133.183-.198.053-.128.082-.264.088-.402v-.02a1.21 1.21 0 00-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 00-.205.334 1.18 1.18 0 00-.09.468v.024c.016.066.089.2.073.333-.063.134-.155.2-.18.264-.026.135-.09.2-.087.4v.066l.001.065c.038.075.062.141.08.198.022.136.07.272.147.4.074.135.15.195.225.33.074.066.153.197.163.134.011-.064-.006-.197-.017-.329v-.066c-.003-.066-.01-.132-.02-.198a1.54 1.54 0 01-.015-.465c.038-.2.1-.333.163-.467.065-.066.12-.132.188-.198.066-.066.138-.133.216-.133a.347.347 0 01.06.006c.053.007.096.025.135.054l.004.002c.109.07.175.176.219.271.082.177.082.383.074.497a3.146 3.146 0 01-.113.647l-.001.001-.115.382-.026.098c-.094.35-.281.628-.516.886-.237.262-.522.463-.847.598-.334.134-.707.2-1.08.132-.373-.064-.733-.265-1.004-.532-.27-.267-.46-.6-.575-.934-.115-.333-.155-.666-.14-.997.016-.332.087-.665.213-.964.127-.3.306-.567.527-.8.224-.233.5-.4.807-.5.306-.1.63-.136.952-.1.328.036.643.138.952.3.31.16.6.4.847.666.247.267.452.6.6.934.147.333.235.666.263 1.002.028.333-.003.665-.098.997a2.943 2.943 0 01-.403.876 3.49 3.49 0 01-.62.733l-.002.002-.028.054c-.054.066-.12.132-.183.198l-.002.002c-.107.133-.229.265-.354.397-.127.133-.257.265-.397.397l-.003.003c-.063.064-.131.133-.2.198-.068.066-.137.133-.2.198l-.002.002c-.155.137-.303.268-.448.397-.145.13-.287.255-.42.398v-.001c-.134.133-.263.265-.391.398-.128.133-.252.265-.372.397-.12.134-.24.268-.352.402l-.001.002c-.116.134-.229.268-.343.4-.114.134-.223.268-.33.402-.107.133-.21.268-.305.4-.097.134-.19.268-.275.402a11.78 11.78 0 00-.46.8l.003-.003a11.96 11.96 0 01-.265.4c-.082.132-.16.265-.23.398a9.32 9.32 0 00-.201.399c-.062.132-.118.266-.17.399a4.63 4.63 0 00-.131.4c-.037.132-.068.266-.09.398a2.51 2.51 0 00-.054.4 1.78 1.78 0 00.02.399c.02.133.054.267.1.399.047.133.103.266.17.399.065.133.144.264.23.396.088.132.186.264.291.395.106.131.219.263.339.395.121.13.248.262.38.393.133.13.271.261.413.39.143.13.29.261.44.392.149.13.303.26.459.392.157.13.316.262.48.392.163.131.328.263.5.393.17.132.345.262.523.392.177.132.36.262.547.392.186.132.376.262.57.391.192.132.39.262.59.392.2.131.403.262.61.392.208.131.418.262.632.392.214.13.431.26.65.39.22.131.443.262.668.392.226.132.453.264.683.392.23.133.46.264.696.391.235.133.47.264.71.391.237.133.477.264.72.391.24.133.485.264.73.392.246.132.494.263.744.391.25.133.502.264.758.392.253.132.51.264.77.391.258.133.52.264.78.392.263.132.527.264.793.391.266.132.535.264.807.391.27.133.545.264.82.392.276.132.553.263.833.391.28.132.562.264.845.392.284.131.57.263.856.391.286.133.576.265.866.392.29.133.583.265.876.392.294.133.59.265.887.392.297.133.597.265.896.392.3.133.602.265.904.392.304.133.61.264.916.392.305.132.614.265.922.392.306.133.617.265.925.392.31.133.622.265.933.392.312.132.626.264.94.392.314.132.63.264.946.392.316.132.635.265.953.392.318.133.639.265.96.392.32.132.644.264.966.392.322.132.648.264.972.392.326.132.653.264.981.392.327.131.657.265.987.392.33.131.661.264.994.391.332.133.666.265 1 .392.333.131.669.264 1.006.392.336.131.673.263 1.012.392.338.13.679.263 1.02.391.34.131.682.264 1.025.392.343.131.687.264 1.032.392.344.131.692.263 1.04.391.347.132.696.264 1.046.392.35.131.7.263 1.052.391.35.132.704.264 1.058.392.354.131.71.263 1.066.391.355.132.713.264 1.072.392.358.131.719.263 1.078.391.36.132.722.264 1.086.392.361.131.726.263 1.09.391.364.132.731.264 1.098.392.366.131.734.263 1.104.391.367.132.738.264 1.11.392.37.131.742.263 1.116.391.372.132.746.264 1.122.392.373.131.749.263 1.126.391.375.132.752.264 1.13.392.377.131.756.263 1.136.391.378.132.76.264 1.142.392.38.13.762.263 1.146.391.381.132.765.264 1.15.392.383.131.77.263 1.156.391.385.132.771.264 1.16.392.385.131.774.263 1.164.391.387.132.778.264 1.169.392.39.131.781.263 1.173.391.39.132.784.264 1.178.392.392.131.788.263 1.184.391.393.132.79.264 1.188.392.395.131.792.263 1.19.391.397.132.796.264 1.196.392.398.131.799.263 1.2.391.4.132.802.264 1.206.392.401.131.806.263 1.21.392.403.131.809.263 1.216.391.404.132.812.264 1.22.392.406.131.816.263 1.226.391.408.132.818.264 1.23.392.408.131.82.263 1.233.391.41.132.824.264 1.238.392.412.131.828.263 1.244.391.413.132.83.264 1.248.392.415.131.832.263 1.25.391.417.132.836.264 1.256.392.418.131.84.263 1.26.391.42.132.842.264 1.265.392.42.131.844.263 1.268.391.422.132.848.264 1.274.392.424.131.85.263 1.278.391.425.132.854.264 1.283.392.427.131.858.263 1.288.391.428.132.86.264 1.292.392.43.131.862.263 1.296.391.431.132.866.264 1.3.392.433.131.868.263 1.304.391.434.132.872.264 1.31.392.436.131.876.263 1.314.391.438.132.878.264 1.318.392.439.131.88.263 1.322.391.44.131.884.263 1.326.391.442.132.886.264 1.332.392.443.131.89.263 1.336.391.445.132.892.264 1.34.392.447.131.896.263 1.346.391.448.132.898.264 1.35.392.45.131.9.263 1.354.391.45.132.904.264 1.358.392.453.131.908.263 1.362.391.454.132.91.264 1.366.392.455.131.913.263 1.37.391.457.132.916.264 1.375.392.458.131.918.263 1.38.391.46.132.921.264 1.383.392.46.131.924.263 1.388.391.463.132.928.264 1.392.392.464.131.93.263 1.396.391.466.132.933.264 1.4.392.467.131.935.263 1.404.391.468.132.94.264 1.41.392.47.131.942.263 1.414.391.471.132.946.264 1.418.392.473.131.948.263 1.422.391.474.132.95.264 1.426.392.476.131.954.263 1.432.391.477.132.957.264 1.436.392.478.131.96.263 1.44.391.48.132.962.264 1.444.392.481.131.966.263 1.45.391.483.132.968.264 1.454.392.484.131.97.263 1.458.391.486.132.974.264 1.462.392.487.131.976.263 1.466.391.488.132.98.264 1.47.392.49.131.983.263 1.476.391.492.132.986.264 1.48.392.492.131.988.263 1.483.391.495.132.99.264 1.488.392.496.131.994.263 1.492.391.497.132.998.264 1.498.392.5.131 1.002.263 1.502.391.5.132 1.004.264 1.506.392.502.131 1.007.263 1.512.391.504.132 1.01.264 1.516.392.505.131 1.014.263 1.522.391.507.132 1.018.264 1.528.392.51.131 1.02.263 1.532.391.51.132 1.024.264 1.538.392.513.131 1.028.263 1.542.391.514.132 1.03.264 1.548.392.516.131 1.034.263 1.554.391.518.132 1.038.264 1.558.392.52.131 1.042.263 1.564.391.522.132 1.045.264 1.57.392.523.131 1.05.263 1.576.391.525.132 1.052.264 1.58.392.527.131 1.057.263 1.588.391.53.132 1.06.264 1.592.392.53.131 1.064.263 1.598.391.533.132 1.068.264 1.604.392.535.131 1.072.263 1.61.391.537.132 1.076.264 1.616.392.538.131 1.08.263 1.622.391.54.132 1.083.264 1.628.392.543.131 1.088.263 1.634.391.545.132 1.092.264 1.64.392.546.131 1.096.263 1.646.391.549.132 1.1.264 1.652.392.55.131 1.103.263 1.658.391.553.132 1.108.264 1.664.392.555.131 1.111.263 1.67.391.556.132 1.116.264 1.676.392.56.131 1.12.263 1.682.391.561.132 1.124.264 1.688.392.563.131 1.128.263 1.694.391.565.132 1.132.264 1.7.392.567.131 1.136.263 1.706.391.57.132 1.14.264 1.712.392.572.131 1.144.263 1.718.391.573.132 1.148.264 1.724.392.576.131 1.152.263 1.73.391.578.132 1.156.264 1.736.392.58.131 1.16.263 1.742.391.582.132 1.164.264 1.748.392.583.131 1.168.263 1.754.391.586.132 1.173.264 1.76.392.588.131 1.177.263 1.767.391.59.132 1.18.264 1.772.392.591.131 1.185.263 1.78.391.594.132 1.188.264 1.786.392.596.131 1.194.263 1.792.391.598.132 1.198.264 1.798.392.6.131 1.202.263 1.806.391.602.132 1.206.264 1.812.392.605.131 1.21.263 1.818.391.606.132 1.214.264 1.824.392.61.131 1.22.263 1.83.391.61.132 1.223.264 1.836.392.613.131 1.228.263 1.844.391.616.132 1.232.264 1.85.392.617.131 1.236.263 1.856.391.62.132 1.24.264 1.862.392.622.131 1.245.263 1.87.391.624.132 1.249.264 1.876.392.626.131 1.254.263 1.882.391.629.132 1.258.264 1.888.392.63.131 1.262.263 1.894.391.633.132 1.266.264 1.9.392.634.131 1.27.263 1.906.391.637.132 1.275.264 1.912.392.64.131 1.28.263 1.92.391.641.132 1.284.264 1.926.392.644.131 1.288.263 1.932.391.646.132 1.292.264 1.94.392.648.131 1.297.263 1.946.391.65.132 1.3.264 1.952.392.652.131 1.306.263 1.96.391.655.132 1.31.264 1.966.392.657.131 1.314.263 1.972.391.66.132 1.318.264 1.978.392.66.131 1.323.263 1.986.391.664.132 1.328.264 1.992.392.666.131 1.332.263 1.998.391.668.132 1.336.264 2.004.392.67.131 1.34.263 2.01.391Z" />
                     </svg>
                     <div class="text-left">
-                        <p class="text-xs text-gray-500">Download for</p>
-                        <p class="font-semibold text-gray-900">Linux</p>
+                        <p class="text-xs text-gray-400">Download for</p>
+                        <p class="font-semibold text-white">Linux</p>
                     </div>
                 </a>
             </div>
@@ -389,7 +396,7 @@
                 </a>
             </div>
 
-            <p class="mt-8 text-sm text-gray-500">
+            <p class="mt-8 text-sm text-gray-400">
                 Available for Windows 10+, macOS 11+, Ubuntu 20.04+, iOS 15+, and Android 10+
             </p>
         </div>
@@ -398,10 +405,44 @@
 {% endblock %}
 
 {% block extra_scripts %}
+<!-- Lightbox Modal -->
+<div id="lightbox"
+    class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm cursor-pointer"
+    onclick="closeLightbox()">
+    <button class="absolute top-4 right-4 text-white hover:text-brand-400 transition-colors p-2"
+        onclick="closeLightbox()">
+        <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    <div class="max-w-[95vw] max-h-[95vh] p-4" onclick="event.stopPropagation()">
+        <img src="{% static 'images/screenshots/main.png' %}" alt="TrailTrack Pro main interface - full size view"
+            class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl">
+    </div>
+</div>
+
 <script>
     // Re-initialize icons after page load for any dynamically added content
     document.addEventListener('DOMContentLoaded', function () {
         lucide.createIcons();
+    });
+
+    function openLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        lucide.createIcons();
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLightbox();
     });
 </script>
 {% endblock %}

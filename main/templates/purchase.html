@@ -1,0 +1,68 @@
+{% extends 'base_marketing.html' %}
+{% load static %}
+
+{% block title %}Purchase License - TrailTrack Pro{% endblock %}
+
+{% block content %}
+<section class="hero-gradient pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4">
+                Secure Details
+            </h1>
+            <p class="text-gray-400">Complete your purchase to receive your license key immediately.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-8 md:p-10 shadow-2xl border border-slate-600/50">
+            <!-- Order Summary -->
+            <div class="border-b border-slate-700 pb-8 mb-8">
+                <h2 class="text-xl font-bold text-white mb-6">Order Summary</h2>
+                <div class="flex justify-between items-center mb-4">
+                    <div>
+                        <h3 class="font-semibold text-gray-200">TrailTrack Pro - Lifetime License</h3>
+                        <p class="text-sm text-gray-400">Version 1.x (Windows, macOS, Linux)</p>
+                    </div>
+                    <span class="text-xl font-bold text-white">$50.00</span>
+                </div>
+                <div class="flex justify-between items-center pt-4 border-t border-slate-700/50">
+                    <span class="text-gray-300 font-medium">Total Due</span>
+                    <span class="text-2xl font-bold text-brand-400">$50.00</span>
+                </div>
+            </div>
+
+            <!-- Checkout Form Placeholder -->
+            <div>
+                <h2 class="text-xl font-bold text-white mb-6">Payment Details</h2>
+
+                <div class="bg-slate-900/50 rounded-xl p-8 border border-slate-700 text-center">
+                    <div class="w-16 h-16 bg-brand-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="credit-card" class="w-8 h-8 text-brand-400"></i>
+                    </div>
+                    <p class="text-gray-300 font-medium mb-2">Checkout Flow Placeholder</p>
+                    <p class="text-sm text-gray-500 max-w-sm mx-auto">
+                        This is where the payment processing form (Stripe/PayPal) will be integrated.
+                        <br>
+                        <span class="text-xs opacity-75 mt-2 block">Secure payment processing</span>
+                    </p>
+                </div>
+
+                <div class="mt-8 flex justify-between items-center">
+                    <a href="{% url 'pricing' %}"
+                        class="text-sm text-gray-400 hover:text-white transition-colors flex items-center">
+                        <i data-lucide="arrow-left" class="w-4 h-4 mr-1"></i> Back
+                    </a>
+                    <button
+                        class="px-8 py-3 bg-brand-500 hover:bg-brand-400 text-white font-bold rounded-lg shadow-lg shadow-brand-500/25 transition-all opacity-50 cursor-not-allowed">
+                        Complete Purchase
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-sm text-gray-500">
+            <i data-lucide="lock" class="w-3 h-3 inline-block mr-1"></i>
+            Payments are secure and encrypted.
+        </div>
+    </div>
+</section>
+{% endblock %}

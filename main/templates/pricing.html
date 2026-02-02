@@ -1,0 +1,203 @@
+{% extends 'base_marketing.html' %}
+{% load static %}
+
+{% block title %}Pricing - TrailTrack Pro{% endblock %}
+{% block meta_description %}Simple, transparent pricing. One-time payment of $50. No subscriptions, no hidden fees. Own
+your data forever.{% endblock %}
+
+{% block content %}
+<!-- Pricing Hero -->
+<section class="hero-gradient pt-32 pb-20 md:pt-40 md:pb-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+            Simple, Transparent <span class="text-brand-400">Pricing</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-12">
+            Stop paying monthly fees to view your own photos. <br class="hidden md:inline">
+            One fair price, yours forever.
+        </p>
+    </div>
+</section>
+
+<!-- Pricing Card Section -->
+<section class="-mt-20 md:-mt-24 pb-20 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-lg mx-auto">
+            <!-- Glassmorphism Pricing Card -->
+            <div
+                class="glass-card rounded-3xl overflow-hidden shadow-2xl border-t border-slate-600/50 relative hover-lift transition-all duration-300">
+
+                <!-- Popular Badge -->
+                <div class="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-brand-400 to-brand-600"></div>
+
+                <div class="p-8 md:p-12 text-center">
+                    <h2 class="text-2xl font-bold text-white mb-2">Lifetime License</h2>
+                    <p class="text-gray-400 mb-8">Everything you need to manage your trail cams.</p>
+
+                    <div class="flex items-center justify-center mb-8">
+                        <span class="text-5xl md:text-7xl font-extrabold text-white tracking-tight">$50</span>
+                        <span class="ml-3 text-lg text-gray-400 self-end mb-2">/ one-time</span>
+                    </div>
+
+                    <a href="{% url 'purchase' %}"
+                        class="block w-full py-4 px-6 bg-brand-500 hover:bg-brand-400 text-white font-bold rounded-xl shadow-lg shadow-brand-500/25 transition-colors duration-200">
+                        Get Started Today
+                    </a>
+                    <p class="mt-4 text-sm text-gray-500">Includes 7-day free trial. No credit card required.</p>
+                </div>
+
+                <div class="bg-slate-900/50 p-8 md:p-12 border-t border-slate-700/50">
+                    <p class="font-semibold text-white mb-6 uppercase tracking-wider text-sm">What's Included:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-400 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-300">Unlimited camera management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-400 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-300">Unlimited photo & video storage (local)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-400 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-300">Interactive map visualizations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-400 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-300">Companion App for simple imports</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-400 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-300">Free updates for version 1.x</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-brand-400 mr-3 flex-shrink-0"></i>
+                            <span class="text-gray-300">No monthly subscriptions</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison Table -->
+<section class="py-20 bg-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-white mb-4">Why Choose TrailTrack Pro?</h2>
+            <p class="text-gray-400">See how we compare to traditional cloud-based management.</p>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr>
+                        <th class="p-4 border-b border-slate-700 text-gray-400 font-medium">Feature</th>
+                        <th
+                            class="p-4 border-b border-slate-700 text-white font-bold text-lg bg-slate-800/80 rounded-t-xl">
+                            TrailTrack Pro</th>
+                        <th class="p-4 border-b border-slate-700 text-gray-400 font-medium">Cloud Apps</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-300">
+                    <tr class="border-b border-slate-700 hover:bg-slate-800/30 transition-colors">
+                        <td class="p-4 font-medium">Cost</td>
+                        <td class="p-4 bg-slate-800/50 text-brand-400 font-bold">$50 One-time</td>
+                        <td class="p-4">$10-30 / month</td>
+                    </tr>
+                    <tr class="border-b border-slate-700 hover:bg-slate-800/30 transition-colors">
+                        <td class="p-4 font-medium">Storage Limits</td>
+                        <td class="p-4 bg-slate-800/50 text-white">Unlimited (Hard Drive)</td>
+                        <td class="p-4">Limited / Tiered</td>
+                    </tr>
+                    <tr class="border-b border-slate-700 hover:bg-slate-800/30 transition-colors">
+                        <td class="p-4 font-medium">Image Quality</td>
+                        <td class="p-4 bg-slate-800/50 text-white">Full Resolution</td>
+                        <td class="p-4">Often Compressed</td>
+                    </tr>
+                    <tr class="border-b border-slate-700 hover:bg-slate-800/30 transition-colors">
+                        <td class="p-4 font-medium">Privacy</td>
+                        <td class="p-4 bg-slate-800/50 text-white">100% Private & Local</td>
+                        <td class="p-4">Data on their servers</td>
+                    </tr>
+                    <tr class="hover:bg-slate-800/30 transition-colors">
+                        <td class="p-4 font-medium">Internet Required</td>
+                        <td class="p-4 bg-slate-800/50 text-white">No (Offline First)</td>
+                        <td class="p-4">Yes (Always Online)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 bg-slate-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-8">
+            <!-- FAQ Item 1 -->
+            <div class="bg-slate-800 rounded-2xl p-6 md:p-8 hover:bg-slate-800/80 transition-colors">
+                <h3 class="text-xl font-bold text-white mb-3">Is this really a one-time payment?</h3>
+                <p class="text-gray-400">
+                    Yes! You pay once and own the version you bought forever. We don't believe in renting software that
+                    you need for your hobbies.
+                </p>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-slate-800 rounded-2xl p-6 md:p-8 hover:bg-slate-800/80 transition-colors">
+                <h3 class="text-xl font-bold text-white mb-3">What happens when a new version comes out?</h3>
+                <p class="text-gray-400">
+                    Minor updates (e.g., 1.1, 1.2) are included for free. Major version upgrades (e.g., v2.0) will be
+                    offered at a discount to existing users, but are optional. Your v1.0 will keep working forever.
+                </p>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-slate-800 rounded-2xl p-6 md:p-8 hover:bg-slate-800/80 transition-colors">
+                <h3 class="text-xl font-bold text-white mb-3">Can I use it on multiple computers?</h3>
+                <p class="text-gray-400">
+                    Your license covers personal use on up to 3 devices that you own and operate.
+                </p>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-slate-800 rounded-2xl p-6 md:p-8 hover:bg-slate-800/80 transition-colors">
+                <h3 class="text-xl font-bold text-white mb-3">Does it work with my specific camera?</h3>
+                <p class="text-gray-400">
+                    TrailTrack Pro works with ANY camera. For cell cams, simply use the "Share" feature on your phone to
+                    send photos from your cell cam app directly to the TrailTrack Pro mobile companion app.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center">
+            <p class="text-gray-400 mb-6">Have more questions?</p>
+            <a href="{% url 'contact' %}"
+                class="inline-flex items-center font-semibold text-brand-400 hover:text-brand-300 transition-colors">
+                Contact Support <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section id="download" class="py-20 hero-gradient text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Start Your Season Right</h2>
+        <p class="text-xl text-gray-300 mb-10">Download the trial today and organize your entire library before you buy.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#"
+                class="inline-flex items-center justify-center px-8 py-4 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-400 transition-all shadow-xl shadow-brand-500/30 hover-lift">
+                <i data-lucide="download" class="w-5 h-5 mr-2"></i>
+                Download Free Trial
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

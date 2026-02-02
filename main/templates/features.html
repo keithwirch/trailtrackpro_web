@@ -1,0 +1,337 @@
+{% extends 'base_marketing.html' %}
+{% block title %}Features - TrailTrack Pro{% endblock %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-gradient pt-24 md:pt-32 pb-16 md:pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+            Powerful Features for
+            <span class="text-brand-400">Hunters & Wildlife Enthusiasts</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+            TrailTrack Pro is the ultimate desktop companion for outdoor enthusiasts, offering powerful tools to manage
+            your properties, map your land, and organize your trail camera media.
+        </p>
+    </div>
+</section>
+
+<!-- 1. Property & Land Management -->
+<section class="py-16 md:py-24 bg-slate-900 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center justify-center p-3 bg-brand-500/10 rounded-xl mb-6">
+                <i data-lucide="map" class="w-8 h-8 text-brand-400"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Property & Land Management
+            </h2>
+            <p class="text-gray-400 text-lg">
+                Master your terrain with advanced mapping tools designed for precision.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass-card rounded-2xl p-8 hover-lift">
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-brand-500/20 rounded-xl flex items-center justify-center mr-6 shrink-0">
+                        <i data-lucide="layers" class="w-6 h-6 text-brand-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Multi-Property Support</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Easily organize multiple hunting lands or properties, keeping maps and photos separate for
+                            each location. Switch contexts instantly without clutter.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-8 hover-lift">
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-brand-500/20 rounded-xl flex items-center justify-center mr-6 shrink-0">
+                        <i data-lucide="globe" class="w-6 h-6 text-brand-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Interactive Satellite Mapping</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            View your land in high-definition detail using top-tier satellite imagery. key features of
+                            the terrain from the comfort of your home.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-8 hover-lift">
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-brand-500/20 rounded-xl flex items-center justify-center mr-6 shrink-0">
+                        <i data-lucide="pen-tool" class="w-6 h-6 text-brand-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Custom Boundary Drawing</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Use "Capture Mode" to draw exact property lines and boundaries, giving you a clear view of
+                            your acreage and borders.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-8 hover-lift">
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-brand-500/20 rounded-xl flex items-center justify-center mr-6 shrink-0">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-brand-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">Precision Location Tagging</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Mark important spots—like stands, blinds, or food plots—with pinpoint accuracy on the map to
+                            plan your next hunt effectively.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. Media Intelligence -->
+<section class="py-16 md:py-24 bg-slate-800 border-b border-slate-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center justify-center p-3 bg-blue-500/10 rounded-xl mb-6">
+                <i data-lucide="image" class="w-8 h-8 text-blue-400"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Media Intelligence
+            </h2>
+            <p class="text-gray-400 text-lg">
+                Turn thousands of trail cam photos into actionable insights.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass-card rounded-2xl p-8 hover-lift">
+                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
+                    <i data-lucide="library" class="w-5 h-5 text-blue-400 mr-2"></i>
+                    Unified Gallery
+                </h3>
+                <p class="text-gray-400 leading-relaxed">
+                    One central library for all your trail camera photos and videos. No more juggling multiple SD card
+                    folders or confusing file names.
+                </p>
+            </div>
+
+            <div class="glass-card rounded-2xl p-8 hover-lift">
+                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
+                    <i data-lucide="map" class="w-5 h-5 text-blue-400 mr-2"></i>
+                    Map-Based Organization
+                </h3>
+                <p class="text-gray-400 leading-relaxed">
+                    Photos are automatically sorted by the property and specific camera location where they were taken,
+                    giving you spatial context to your media.
+                </p>
+            </div>
+
+            <div class="glass-card rounded-2xl p-8 hover-lift">
+                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
+                    <i data-lucide="tag" class="w-5 h-5 text-blue-400 mr-2"></i>
+                    Smart Tagging System
+                </h3>
+                <p class="text-gray-400 leading-relaxed">
+                    Tag your photos with custom categories (e.g., "Buck", "Doe", "Turkey") to find exactly what you're
+                    looking for purely by filtering.
+                </p>
+            </div>
+
+            <div class="glass-card rounded-2xl p-8 hover-lift">
+                <h3 class="text-xl font-bold text-white mb-3 flex items-center">
+                    <i data-lucide="play-circle" class="w-5 h-5 text-blue-400 mr-2"></i>
+                    Plays Everything
+                </h3>
+                <p class="text-gray-400 leading-relaxed">
+                    Supports all major trail camera photo and video formats right out of the box so you never miss a
+                    moment.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3. Mobile Companion App -->
+<section class="py-16 md:py-24 bg-slate-900 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center justify-center p-3 bg-purple-500/10 rounded-xl mb-6">
+                    <i data-lucide="smartphone" class="w-8 h-8 text-purple-400"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Mobile Companion App
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div
+                            class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center shrink-0 mr-4 border border-slate-700">
+                            <i data-lucide="arrow-right-left" class="w-5 h-5 text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">Seamless Field Transfer</h4>
+                            <p class="text-gray-400 mt-1">
+                                Bridge the gap between the woods and your computer. Transfer data effortlessly when you
+                                get back to camp.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div
+                            class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center shrink-0 mr-4 border border-slate-700">
+                            <i data-lucide="wifi" class="w-5 h-5 text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">Direct WiFi Sharing</h4>
+                            <p class="text-gray-400 mt-1">
+                                Instantly send photos and videos from your phone to your desktop app over your home WiFi
+                                without cables.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div
+                            class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center shrink-0 mr-4 border border-slate-700">
+                            <i data-lucide="zap" class="w-5 h-5 text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">Automatic Connection</h4>
+                            <p class="text-gray-400 mt-1">
+                                The app automatically finds your computer on the network—no technical setup or manual
+                                configuration required.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div
+                            class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center shrink-0 mr-4 border border-slate-700">
+                            <i data-lucide="crosshair" class="w-5 h-5 text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">GPS Marking</h4>
+                            <p class="text-gray-400 mt-1">
+                                Use your phone's GPS while in the field to instantly save new camera locations to your
+                                desktop map.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative items-center justify-center flex">
+                <!-- Placeholder for App Screenshot -->
+                <div
+                    class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl border border-slate-700 p-8 shadow-2xl max-w-sm w-full aspect-[9/16] flex items-center justify-center transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <div class="text-center">
+                        <i data-lucide="smartphone" class="w-24 h-24 text-slate-700 mx-auto mb-4"></i>
+                        <p class="text-slate-500 font-medium">Mobile App Interface</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. Privacy & Performance -->
+<section class="py-16 md:py-24 bg-slate-800 border-b border-slate-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Privacy & Performance
+            </h2>
+            <p class="text-gray-400 text-lg">
+                Built for speed and security, keeping your data in your hands.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="p-6 rounded-2xl bg-slate-700/50 border border-slate-600">
+                <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="shield-check" class="w-8 h-8 text-green-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Your Data Stays Yours</h3>
+                <p class="text-gray-400">
+                    All your maps, photos, and locations are stored locally on your computer. Nothing is uploaded to the
+                    cloud, ensuring complete privacy.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-700/50 border border-slate-600">
+                <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="wifi-off" class="w-8 h-8 text-green-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Works Offline</h3>
+                <p class="text-gray-400">
+                    No internet connection? No problem. Access your database and manage your media anywhere, anytime.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-700/50 border border-slate-600">
+                <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="zap" class="w-8 h-8 text-green-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Blazing Fast</h3>
+                <p class="text-gray-400">
+                    Designed for speed, enabling you to handle thousands of photos and videos without slowing down your
+                    computer.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. Modern Experience -->
+<section class="py-16 md:py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-brand-900/50 to-slate-800 rounded-3xl border border-slate-700 p-8 md:p-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                        A Modern Experience
+                    </h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-center">
+                            <div
+                                class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center mr-4 shrink-0">
+                                <i data-lucide="monitor" class="w-5 h-5 text-brand-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Cross-Platform</h3>
+                                <p class="text-gray-400">
+                                    Works perfectly on Windows, Mac, and Linux.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div
+                                class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center mr-4 shrink-0">
+                                <i data-lucide="moon" class="w-5 h-5 text-brand-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Dark Mode</h3>
+                                <p class="text-gray-400">
+                                    A sleek, eye-friendly design that looks great day or night.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-right">
+                    <a href="{% url 'index' %}#download"
+                        class="inline-flex items-center justify-center px-8 py-4 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-400 transition-all shadow-xl shadow-brand-500/30 hover-lift">
+                        <i data-lucide="download" class="w-5 h-5 mr-2"></i>
+                        Get TrailTrack Pro Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

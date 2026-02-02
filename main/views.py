@@ -11,7 +11,7 @@ def privacy_policy(request):
 
 # Placeholder views for future marketing pages
 def features(request):
-    return render(request, 'placeholder.html', {'page_title': 'Features'})
+    return render(request, 'features.html', {'page_title': 'Features'})
 
 def pricing(request):
     return render(request, 'pricing.html')

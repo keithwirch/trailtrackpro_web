@@ -80,6 +80,21 @@
         }
     </script>
 
+    <!-- Brevo Conversations {literal} -->
+    <script>
+            (function (d, w, c) {
+                w.BrevoConversationsID = '6992743504587db648009285';
+                w[c] = w[c] || function () {
+                    (w[c].q = w[c].q || []).push(arguments);
+                };
+                var s = d.createElement('script');
+                s.async = true;
+                s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+                if (d.head) d.head.appendChild(s);
+            })(document, window, 'BrevoConversations');
+    </script>
+    <!-- /Brevo Conversations {/literal} -->
+
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,8 +166,6 @@
                         class="text-gray-300 hover:text-brand-400 transition-colors font-medium">Features</a>
                     <a href="{% url 'pricing' %}"
                         class="text-gray-300 hover:text-brand-400 transition-colors font-medium">Pricing</a>
-                    <a href="{% url 'contact' %}"
-                        class="text-gray-300 hover:text-brand-400 transition-colors font-medium">Contact</a>
                 </div>
 
                 <!-- CTA Button -->
@@ -177,8 +190,6 @@
                         class="text-gray-300 hover:text-brand-400 transition-colors font-medium py-2">Features</a>
                     <a href="{% url 'pricing' %}"
                         class="text-gray-300 hover:text-brand-400 transition-colors font-medium py-2">Pricing</a>
-                    <a href="{% url 'contact' %}"
-                        class="text-gray-300 hover:text-brand-400 transition-colors font-medium py-2">Contact</a>
                     <a href="#download"
                         class="inline-flex items-center justify-center px-5 py-2.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-400 transition-colors">
                         <i data-lucide="download" class="w-4 h-4 mr-2"></i>
@@ -223,7 +234,6 @@
                 <div>
                     <h4 class="text-white font-semibold mb-4">Company</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="{% url 'contact' %}" class="hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
 

@@ -66,31 +66,39 @@ def activate_license(request):
     if license.expires_at and license.expires_at < timezone.now():
         return json_error('EXPIRED', 'This license has expired')
     
-    # Check if already activated on this machine
-    existing_activation = LicenseActivation.objects.filter(
+    # Check if already exists for this machine (active or inactive)
+    activation = LicenseActivation.objects.filter(
         license=license,
-        machine_id=machine_id,
-        is_active=True
+        machine_id=machine_id
     ).first()
     
-    if existing_activation:
-        # Re-activation on same machine - update the version/platform
-        existing_activation.app_version = app_version
-        existing_activation.platform = platform
-        existing_activation.save()
+    if activation:
+        if not activation.is_active:
+             # If reactivating, we must check limits
+             if not license.can_activate:
+                return json_error(
+                    'ALREADY_ACTIVATED', 
+                    'This license is already activated on another machine'
+                )
+             activation.is_active = True
+
+        # Update metadata for both active and reactivated
+        activation.app_version = app_version
+        activation.platform = platform
+        activation.save()
+        
         return JsonResponse({
             'success': True,
             'license': {'email': license.email}
         })
     
-    # Check if activated on a different machine (and would exceed limit)
+    # New activation
     if not license.can_activate:
         return json_error(
             'ALREADY_ACTIVATED', 
             'This license is already activated on another machine'
         )
     
-    # Create new activation
     LicenseActivation.objects.create(
         license=license,
         machine_id=machine_id,

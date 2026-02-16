@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<script src="https://js.stripe.com/v3/"></script>
 <!-- Hero Section -->
 <section class="hero-gradient pt-24 md:pt-32 pb-16 md:pb-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,15 +18,15 @@
                     and import directly from cell cams. All without the cloud.
                 </p>
                 <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#download"
+                    <button id="hero-checkout-button"
                         class="inline-flex items-center justify-center px-8 py-4 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-400 transition-all shadow-xl shadow-brand-500/30 hover-lift">
-                        <i data-lucide="download" class="w-5 h-5 mr-2"></i>
-                        Download Free 7-Day Trial
-                    </a>
-                    <a href="{% url 'features' %}"
+                        <i data-lucide="credit-card" class="w-5 h-5 mr-2"></i>
+                        Purchase Now
+                    </button>
+                    <a href="#download"
                         class="inline-flex items-center justify-center px-8 py-4 bg-slate-800 text-brand-400 font-bold rounded-xl hover:bg-slate-700 transition-all border border-slate-600 hover-lift">
-                        <i data-lucide="play-circle" class="w-5 h-5 mr-2"></i>
-                        See Features
+                        <i data-lucide="download" class="w-5 h-5 mr-2"></i>
+                        Download Trial
                     </a>
                 </div>
                 <div class="mt-8 flex items-center justify-center lg:justify-start space-x-6 text-sm text-gray-400">
@@ -375,6 +376,41 @@
         </div>
     </div>
 </section>
+</section>
+
+<script type="text/javascript">
+    const stripe = Stripe('{{ stripe_public_key }}');
+    const heroCheckoutButton = document.getElementById('hero-checkout-button');
+
+    if (heroCheckoutButton) {
+        heroCheckoutButton.addEventListener('click', function () {
+            fetch("{% url 'create_checkout_session' %}", {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}',
+                },
+            })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (session) {
+                    if (session.error) {
+                        alert(session.error);
+                        return;
+                    }
+                    return stripe.redirectToCheckout({ sessionId: session.id });
+                })
+                .then(function (result) {
+                    if (result.error) {
+                        alert(result.error.message);
+                    }
+                })
+                .catch(function (error) {
+                    console.error('Error:', error);
+                });
+        });
+    }
+</script>
 {% endblock %}
 
 {% block extra_scripts %}

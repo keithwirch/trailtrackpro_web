@@ -65,3 +65,34 @@ class LicenseActivation(models.Model):
     def __str__(self):
         status = "active" if self.is_active else "inactive"
         return f"{self.license.key} on {self.machine_id[:8]}... ({status})"
+
+
+class Purchase(models.Model):
+    """
+    Tracks a purchase transaction from Stripe.
+    """
+    stripe_checkout_session_id = models.CharField(max_length=200, unique=True)
+    amount = models.IntegerField(help_text="Amount in cents")
+    currency = models.CharField(max_length=3, default='usd')
+    
+    STATUS_CHOICES = [
+        ('pending', 'Pending'),
+        ('completed', 'Completed'),
+        ('failed', 'Failed'),
+    ]
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    
+    customer_email = models.EmailField()
+    license = models.OneToOneField(
+        License, 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        blank=True, 
+        related_name='purchase'
+    )
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Purchase {self.stripe_checkout_session_id[:10]}... ({self.status})"

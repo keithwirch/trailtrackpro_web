@@ -136,3 +136,16 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Stripe Configuration
+from django.core.exceptions import ImproperlyConfigured
+
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+STRIPE_PRICE_ID = os.environ.get('STRIPE_PRICE_ID')
+
+if not STRIPE_PUBLIC_KEY or not STRIPE_SECRET_KEY or not STRIPE_PRICE_ID:
+    raise ImproperlyConfigured(
+        "Stripe keys are missing. Please set STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, and STRIPE_PRICE_ID "
+        "environment variables."
+    )

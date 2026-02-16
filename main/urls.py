@@ -11,5 +11,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('terms-of-use/', views.terms_of_use, name='terms_of_use'),
     path('privacy-policy/', views.privacy_policy, name='privacy_policy'),
-    path('purchase/', views.purchase, name='purchase'),
+    path('create-checkout-session/', views.create_checkout_session, name='create_checkout_session'),
+    path('success/', views.success, name='success'),
+    path('cancel/', views.cancel, name='cancel'),
 ]

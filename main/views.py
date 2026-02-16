@@ -28,9 +28,6 @@ def pricing(request):
         'stripe_public_key': settings.STRIPE_PUBLIC_KEY
     })
 
-def contact(request):
-    return render(request, 'placeholder.html', {'page_title': 'Contact'})
-
 def create_checkout_session(request):
     if request.method == 'POST':
         try:
